@@ -29,5 +29,5 @@ docker run --volumes-from=pedacoin-data --name=pedacoin-node -d -p 55883:55883 -
 Now, we've got pedacoind running, which is nice. But what if we want to get the config?
 
 ```
-docker run --volumes-from=pedacoin-data -it --rm -p 55883:55883 -p 55884:55884 pedacoind getconfig
+docker run --volumes-from=pedacoin-data -it --rm jhbruhn/pedacoind getconfig
 ```

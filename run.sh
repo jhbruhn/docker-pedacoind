@@ -7,7 +7,7 @@ init() {
 
   if [ ! -e "$HOME/.pedacoin/pedacoin.conf" ]; then
       mkdir -p $HOME/.pedacoin/
-      /daemon/src/pedacoind 2>&1 | grep "^rpc" > $HOME/.pedacoin/pedacoin.conf
+      /pedacoind 2>&1 | grep "^rpc" > $HOME/.pedacoin/pedacoin.conf
   fi
 }
 
@@ -25,7 +25,7 @@ case $cmd in
       exit 0
       ;;
    pedacoind)
-      /daemon/src/pedacoind "$@"
+      /pedacoind -rpcallowip=* "$@"
       exit $?
       ;;
    log)
