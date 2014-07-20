@@ -7,7 +7,7 @@ init() {
 
   if [ ! -e "$HOME/.pedacoin/pedacoin.conf" ]; then
       mkdir -p $HOME/.pedacoin/
-      /daemon/src/pedacoin 2>&1 | grep "^rpc" > $HOME/.pedacoin/pedacoin.conf
+      /daemon/src/pedacoind 2>&1 | grep "^rpc" > $HOME/.pedacoin/pedacoin.conf
   fi
 }
 
